@@ -1,7 +1,7 @@
 # ramp_up_python
 # Task_1:
 # 1. How to run this file:
-     py Task1_strings.py
+     python Task1_strings.py
      # Key_points for the task:
         1. I have read the String statement from the command line
         2. I have calculated total number of characters present in the statement.
@@ -15,7 +15,7 @@
         10. I have Printed final latest String statement
 # Task_2:
 # 1. How to run this file:
-     py Task2_regex.py
+     python Task2_regex.py
      # Key_points for the task:
         1. By using Regular expressions I have written a Python program to validate the entered email address if the email is valid then 
            that email i have taken into a file. Continue  
@@ -24,7 +24,7 @@
 
 # Task_3:
 # 1. How to run this file:
-     py Task3_regex.py
+     python Task3_regex.py
      1. By using regular expression I have Written a Python Program to check the entered IP is pining or not.
      2. If the IP is Pining write the IP into a txt file.
      3. If the IP is not pining write the IP into a txt file.
