@@ -22,7 +22,6 @@ def reverse_string(input_string):
     while i>=0:
         reverse_str = reverse_str + input_string[i]
         i = i -1
-        print(i)
     return reverse_str
 def reverse_words(input_string):
     reverse_words_list = []
@@ -31,42 +30,61 @@ def reverse_words(input_string):
     return " ".join(reverse_words_list)
 
 def main():
-    try:
-        input_string = input("Enter a statement: ")
-        # count the no.of characters present in the string
-        char_count = 0
-        for char in input_string:
-            char_count = char_count + 1
-        print(f"Total no.of characters present in a string are {char_count}")
-        #print(len(input_string))
-        # count the no.of duplicate characters present in a given string
-        print(count_duplicates(input_string))
+    while True:
+        try:
+            input_string = input("Enter a statement: ")
+            # count the no.of characters present in the string
+            char_count = 0
+            for char in input_string:
+                char_count = char_count + 1
+            print(f"Total no.of characters present in a string are {char_count}")
+            #print(len(input_string))
+            # count the no.of duplicate characters present in a given string
+            print(count_duplicates(input_string))
 
-        # contno.of words in a given string
-        word_count = 0
-        for word in input_string.split():
-            word_count = word_count+1
-        print(f'Total no.of words present in a given string are {word_count}') 
+            # count no.of words in a given string
+            word_count = 0
+            for word in input_string.split():
+                word_count = word_count+1
+            print(f'Total no.of words present in a given string are {word_count}') 
 
-        # count the no.of duplicate words presenr in a given string
-        print(count_duplicates(input_string.split()))  
+            # count the no.of duplicate words presenr in a given string
+            print(count_duplicates(input_string.split()))  
 
-        # reverse the given string
-        print(reverse_string(input_string)) 
+            # reverse the given string
+            print(reverse_string(input_string)) 
 
-        # reverse the words present in the given string
-        reverse_words_list = reverse_words(input_string)
-        print("reversed words", reverse_words_list)
-        new_statement = reverse_words_list
-        print(f"new statement is: {new_statement}")
-        latest_statement = remove_duplicate_characters(new_statement)
-        print(latest_statement)
-    except KeyboardInterrupt:
-        print("\nProgram interrupted by user.")
-    except Exception as e:
-        print(f"An unexpected errors like value Error, index error, or memory error occurred: {e}")
+            # reverse the words present in the given string
+            reverse_words_list = reverse_words(input_string)
+            print("reversed words", reverse_words_list)
+            new_statement = reverse_words_list
+            print(f"new statement is: {new_statement}")
+            latest_statement = remove_duplicate_characters(new_statement)
+            print(latest_statement)
+            another_statement = input("Do you want to continue with another statement?(Yes/NO):")
+            if another_statement.lower() == 'yes':
+                continue
+            else:
+                break
+        except KeyboardInterrupt:
+            print("Program interrupted by user.")
+        # except ValueError as ve:
+        #     print(f"ValueError: {ve}")
+        # except KeyError as ke:
+        #     print(f"KeyError: {ke}")
+        # except IndexError as ie:
+        #     print(f"IndexError: {ie}")
+        # except TypeError as te:
+        #     print(f"TypeError: {te}")
+        # except (IOError, OSError) as ioe:
+        #     print(f"IOError or OSError: {ioe}")
+        # except MemoryError:
+        #     print("MemoryError: Insufficient memory.")
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
 if __name__ == "__main__":
     main()
+
 
 
 
