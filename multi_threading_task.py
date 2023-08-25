@@ -124,71 +124,7 @@ if __name__ == "__main__":
 
 
 
-# import random
-# import threading
-# import multiprocessing
-# import logging
-# from threading import Thread
-# from queue import Queue
-# import time
-# logging.basicConfig(
-#     format='%(levelname)s - %(asctime)s.%(msecs)03d: %(message)s',
-#     datefmt='%H:%M:%S',
-#     level=logging.DEBUG
-# )
-# lock = threading.Lock()  # Lock for shared resources
-# def display(msg):
-#     threadname=threading.current_thread().name
-#     processname=multiprocessing.current_process().name
-#     logging.info(f"{processname}\{threadname}:{msg}")
-# def create_work(queue,finished,max):
-#     #finished.put(False)
-#     for x in range(max):
-#         v=random.randint(1,100)
-#         queue.put(v)   #adding random values to the queue
-#         display(f'producing {x}: {v}')
-#     #finished.put(True)
-#     display("finished")
-# def perform_work(work,finished):
-#     counter=0
-#     while True:
-#         if not work.empty():   #checking if the queue is not emplty and consuming the items
-#             v = work.get()
-#             display(f'consuming {counter}: {v}')
-#             counter=counter+1
-#         else:
-#             q = finished.get()
-#             if q == True:
-#                 break
-#             display("finished")
-# def main():     #The main function is responsible for creating and managing the producer and consumer threads.It creates queues for communication between threads.
-#     max = int(input("Enter the maximum value for the queue: "))
-#     num_consumers = int(input("Enter the number of consumer threads: "))
-#     work = Queue()
-#     finished = Queue()
-#     producer = Thread(target=create_work,args=[work,finished,max])
-    
-#     work = Queue()
-#     finished = Queue()
-    
-#     producer = Thread(target=create_work, args=[work, finished, max])
-#     consumers = [Thread(target=perform_work, args=[work, finished]) for _ in range(num_consumers)]
-    
-#     producer.start()
-#     for consumer in consumers:
-#         consumer.start()
-        
-#     producer.join()
-#     for consumer in consumers:
-#         consumer.join()
-        
-#     display("producer has finished")
-#     display("consumers have finished")
 
-# if __name__=="__main__":
-#     main()
-#     logging.shutdown() 
-    
 
 
 
