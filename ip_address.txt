@@ -1,7 +1,0 @@
-valid ip_address: 192.168.210.11
-valid ip_address: 192.168.250.11
-Non-valid ip_address: 1.2.3.4
-Non-valid ip_address: 1.2.3.4
-Valid ip_address: 127.0.0.1
-Non-valid ip_address: 192.168.1.0
-Valid ip_address: 1.1.1.1
