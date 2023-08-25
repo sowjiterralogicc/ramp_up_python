@@ -12,10 +12,11 @@
 # Task_5:
   # How to run a file
      1. Python Multi_threading_task.py
-         Write a Python program for Multiple Producers and Multiple Consumers using Threads 
+         Written a Python program for Multiple Producers and Multiple Consumers using Threads 
          I have Taken input from the command line to set how many producers and consumers to perform functionality.
 
 
 # Task_6:
   # How to run a file
      1. Python geometric_shapes.py
+        Calculating the area of square, triangle and circle using both inheritance and function overloading, use shape as base class.
