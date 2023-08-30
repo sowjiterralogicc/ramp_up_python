@@ -8,14 +8,14 @@ while True:
     else:
         notes_count = {}
         for denomination in denominations:
-            print("denominations::::::",denomination)  #500
+            print("denominations::::::",denomination) 
             if amount >= denomination:
-                #print("given amount:::::::",amount)  #1000
+                #print("given amount:::::::",amount)  
                 count = amount // denomination 
-                #print("count::::::",count)   #2
-                notes_count[denomination] = count  #500(key)=2(count)
+                #print("count::::::",count)   
+                notes_count[denomination] = count  
                 #print("notes_count:::::",notes_count)
-                amount -= count * denomination   #for example count is 1 and denomination is 500 then 500 - original amount the it will give u certain amount
+                amount -= count * denomination  
                 #print("amount:::::::",amount)
 
         print("Dispensing the following notes:")
