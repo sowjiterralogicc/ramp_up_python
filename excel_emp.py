@@ -137,39 +137,4 @@ print(f"Employee IDs who haven't filled attendance in the previous 5 days: {abt_
 
 
 
-# import pandas as pd
-# from datetime import datetime, timedelta
 
-# # Read the Excel/CSV sheet and skip the first row (header)
-# data = pd.read_excel("Untitled spreadsheet.csv.xlsx", skiprows=[1])  # Replace with your file path
-# data.columns = pd.to_datetime(data.columns).date
-# # print(data.columns)
-# # print(data)
-
-
-# # Get today's date and the previous 5 days
-# today = datetime.now().date()
-# previous_5_days = [today - timedelta(days=i) for i in range(1, 6)]
-
-# # Filter the dataframe for the relevant columns and rows
-# date_columns = [col for col in data.columns if col != 'Emp ID']
-# filtered_df = data[['Emp ID'] + date_columns]
-
-# # Count WFH and WFO for today
-# today_wfh_count = filtered_df[date_columns].applymap(lambda x: x == 'WFH').sum().sum()
-# today_wfo_count = filtered_df[date_columns].applymap(lambda x: x == 'WFO').sum().sum()
-
-# # Count WFH and WFO for the previous 5 days
-# previous_wfh_count = filtered_df[date_columns].applymap(lambda x: x in ['WFH', 'WFO']).sum().sum()
-# previous_wfo_count = filtered_df[date_columns].applymap(lambda x: x == 'WFO').sum().sum()
-
-# # Find employees who haven't filled attendance in the past 6 days
-# missing_attendance = filtered_df[filtered_df[date_columns].isin(['', 'Blank Cell'])].dropna()
-
-# # Print results
-# print(f"WFH Count for Today: {today_wfh_count}")
-# print(f"WFO Count for Today: {today_wfo_count}")
-# print(f"WFH Count for Previous 5 Days: {previous_wfh_count}")
-# print(f"WFO Count for Previous 5 Days: {previous_wfo_count}")
-# print("\nEmployees with Missing Attendance:")
-# print(missing_attendance)
